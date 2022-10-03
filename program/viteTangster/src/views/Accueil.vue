@@ -2,7 +2,7 @@
   <div class="content">
     <h2>Tangster</h2>
     <div class="content-img">
-      <img src="../assets/Accueil/snake.jpg" alt="Accueil" />
+      <img src="../assets/images/Accueil/snake.jpg" alt="Accueil" />
     </div>
     <div class="content-tabs">
       <router-link to="/Home">Work</router-link>
