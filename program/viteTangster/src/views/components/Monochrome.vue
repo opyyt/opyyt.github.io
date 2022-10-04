@@ -1,6 +1,9 @@
 <template>
   <div>
     <div class="parent white">
+      <div class="firstImg">
+        <el-image :src="firstImg" />
+      </div>
       <el-image
         class="box green"
         v-for="image in images"
@@ -14,10 +17,10 @@
 <script lang="ts" setup>
 import useImageUrl from "../../utils/useImageUrl";
 import { ref } from "vue";
+const firstImg = ref(useImageUrl("Monochrome", "Linguang", "jpg"));
 const images = ref([
   useImageUrl("Monochrome", "Chen", "jpg"),
   useImageUrl("Monochrome", "Chenduo", "jpg"),
-  useImageUrl("Monochrome", "Linguang", "jpg"),
   useImageUrl("Monochrome", "munihei", "jpg"),
   useImageUrl("Monochrome", "shenguan", "jpg"),
   useImageUrl("Monochrome", "WangYao01", "jpg"),
@@ -31,22 +34,17 @@ const images = ref([
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 900px;
+  width: 700px;
   height: auto;
   overflow: hidden;
 }
-
+.firstImg {
+  width: 450px;
+  height: 438.01px;
+}
 .box {
   flex: 1 1 300px; /*  Stretching: */
   flex: 0 1 300px; /*  No stretching: */
   margin: 5px;
-}
-.box img {
-  height: 345px;
-  width: 900px;
-  transition: all 2s;
-}
-img:hover {
-  transform: scale(1.3);
 }
 </style>

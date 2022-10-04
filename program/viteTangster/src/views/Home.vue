@@ -2,7 +2,7 @@
   <div class="content">
     <h2>Tangster</h2>
     <div class="tab">
-      <div @click="goAccueil" class="tabs-item">accueil</div>
+      <div @click="goAccueil" class="tabs-item">Accueil</div>
       <div
         @click="swichItem(item)"
         class="tabs-item"
@@ -72,6 +72,9 @@ const goAccueil = () => {
   text-align: left;
   align-items: center;
   margin-bottom: 0em;
+}
+.tab div {
+  cursor: pointer;
 }
 .tabs-item {
   padding: 20px;

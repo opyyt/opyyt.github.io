@@ -1,12 +1,18 @@
 <template>
   <div>
     <div class="parent white">
+      <div class="firstImg">
+        <el-image :src="firstImg" />
+      </div>
       <el-image
         class="box green"
         v-for="image in images"
         :key="image"
         :src="image"
       />
+      <div>
+        <el-image :src="listImg" />
+      </div>
     </div>
   </div>
 </template>
@@ -14,18 +20,17 @@
 <script lang="ts" setup>
 import useImageUrl from "../../utils/useImageUrl";
 import { ref } from "vue";
+const firstImg = ref(useImageUrl("Color", "snake", "jpg"));
+const listImg = ref(useImageUrl("Color", "yansai", "jpg"));
 const images = ref([
   useImageUrl("Color", "03", "jpg"),
   useImageUrl("Color", "04", "jpg"),
-  useImageUrl("Color", "dehuang", "jpg"),
   useImageUrl("Color", "Illustration03", "jpg"),
   useImageUrl("Color", "kashandela", "jpg"),
-  useImageUrl("Color", "lamu", "jpg"),
-  useImageUrl("Color", "snake", "jpg"),
   useImageUrl("Color", "summer", "jpg"),
   useImageUrl("Color", "swore", "jpg"),
-  useImageUrl("Color", "yansai", "jpg"),
   useImageUrl("Color", "yinghuang", "jpg"),
+  useImageUrl("Color", "dehuang", "jpg"),
 ]);
 </script>
 
@@ -34,11 +39,14 @@ const images = ref([
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 900px;
+  width: 700px;
   height: auto;
   overflow: hidden;
 }
-
+.firstImg {
+  width: 450px;
+  height: 279.9px;
+}
 .box {
   flex: 1 1 300px; /*  Stretching: */
   flex: 0 1 300px; /*  No stretching: */
