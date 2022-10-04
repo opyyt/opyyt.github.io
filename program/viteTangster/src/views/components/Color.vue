@@ -10,7 +10,7 @@
         :key="image"
         :src="image"
       />
-      <div>
+      <div class="firstImg">
         <el-image :src="listImg" />
       </div>
     </div>
@@ -44,8 +44,8 @@ const images = ref([
   overflow: hidden;
 }
 .firstImg {
-  width: 450px;
-  height: 279.9px;
+  width: 600px;
+  height: auto;
 }
 .box {
   flex: 1 1 300px; /*  Stretching: */
