@@ -35,8 +35,8 @@ const images = ref([
 }
 
 .box {
-  flex: 1 1 150px; /*  Stretching: */
-  flex: 0 1 150px; /*  No stretching: */
+  flex: 1 1 300px; /*  Stretching: */
+  flex: 0 1 300px; /*  No stretching: */
   margin: 5px;
 }
 .box img {
